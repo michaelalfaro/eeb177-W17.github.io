@@ -4,7 +4,7 @@ email: gkandlikar@ucla.edu
 description: > # this means to ignore newlines until "baseurl:"
   This is the course website for the Discussion section of the UCLA W17 EEB-177/234 
   (Practical Computing for Ecology and Evolutionary Biology) course.
-baseurl: "" # the subpath of your site, e.g. /blog/
+baseurl: "/eeb177-W17" # the subpath of your site, e.g. /blog/
 url: "http://gauravsk.github.io/eeb177-W17" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  gauravsk
