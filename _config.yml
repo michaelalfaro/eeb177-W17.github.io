@@ -9,7 +9,7 @@ url: "http://gauravsk.github.io/eeb177-W17" # the base hostname & protocol for y
 twitter_username: 
 github_username:  gauravsk
 exclude: weekly_content
-theme: jekyll-theme-merlot
+theme: jekyll-theme-time-machine
 
 # Build settings
 markdown: kramdown
