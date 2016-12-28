@@ -11,7 +11,7 @@ author: Gaurav Kandlikar
 
 Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- note the author line on my git log. Here's an example of a commit log from the [SESYNC Bayesian Analysis repository](https://github.com/gauravsk/SESYNCBayes)- notice that some commits were made by Mary Collins, others by CCheCastaldo:
 
-![]({{ site.url }}/images/git-screenshot.png)
+![]({{ site.url }}/_images/git-screenshot.png)
 
 
 We set up our name and email address with the following commands in the terminal:  
