@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 1- Setting up the EEB177 Virtual Box
+title: Week 0- Setting up the EEB177 Virtual Box
 date:   2016-12-28
 author: Gaurav Kandlikar
 ---
@@ -22,10 +22,15 @@ Follow these steps to get your virtualbox going:
 4) Double-click on the image file "eeb177-lubuntu-box.ova"   
 5) Click next; this will take you to the Appliance Settings menu. Feel free to read through the appliance settings, and click "Next".   
 6) Importing the image will take a few minutes.   
-7) Once importing is complete, launch the virtualbox by double clicking on the "EEB177-Lubuntu" icon. **NOTE**: You will liley have an error the first time you try to launch your box. Complete Step 8 below to work around this error.   
+7) Once importing is complete, launch the virtualbox by double clicking on the "EEB177-Lubuntu" icon. **NOTE**: You will likey have an error the first time you try to launch your box, with the error message `A new node couldn't be inserted because one with the same name exists. (VERR_CFGM_NODE_EXISTS)`. Complete Step 8 below to work around this error.   
 8) Right-click on the "EEB177-Lubuntu" icon and select "Settings". Select "USB" in the settings menu. Un-check the "Enable USB controller" checkbox, and recheck the same box. Click OK to apply the settings.   
 9) Double click on the icon to launch the virtualbox. You should see a series of black screens scroll by with some text; finally, you should see a dialog box with username "EEB-177-student". The password for this account is `yakyak`.   
 
 You should see a home screen that looks like this:
 
 ![]({{ site.url }}/images/virtualbox_screenshot.png)
+
+If you're here, congrats! You have a functioning virtualbox! Complete the next few steps to add some more functionality to your environment: 
+
+1) Launch the Firefox browser and ensure that you can connect to the internet.   
+2) 
