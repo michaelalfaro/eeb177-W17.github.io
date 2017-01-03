@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Week 0- Setting up the EEB177 Virtual Box
-date:   2016-12-28
+date:   2017-01-02
 author: Gaurav Kandlikar
 ---
 
@@ -32,5 +32,5 @@ You should see a home screen that looks like this:
 
 If you're here, congrats! You have a functioning virtualbox! Complete the next few steps to add some more functionality to your environment: 
 
-1) Launch the Firefox browser and ensure that you can connect to the internet.   
-2) 
+- Launch the Firefox browser and ensure that you can connect to the internet.   
+- You can make files that are housed on your "host" computer available to the "guest" computer (i.e. the virtual computer) by setting up "Shared Folders". To set up a shared folder, navigate to "Devices" and select "Shared Folder Settings". Click on the "Add" icon (a blue folder with a green "+"). Browse to the folder you wish to share across the host and guest in the "Folder Path". 
