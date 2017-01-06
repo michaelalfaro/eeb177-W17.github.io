@@ -9,54 +9,46 @@ author: Gaurav Kandlikar
 
 ### Setting up git locally
 
-Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- note the author line on my git log. Here's an example of a commit log from the [SESYNC Bayesian Analysis repository](https://github.com/gauravsk/SESYNCBayes)- notice that some commits were made by Mary Collins, others by CCheCastaldo:
-
+Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- note the author line on my git log:
 ![]({{ site.url }}/images/git-screenshot.png)
 
 
 We set up our name and email address with the following commands in the terminal:  
 
-> `git config --global user.name "YOUR NAME"`  
+`git config --global user.name "YOUR NAME"`  
 
-> `git config --global user.email "YOUR EMAIL ADDRESS"`
+`git config --global user.email "YOUR EMAIL ADDRESS"`
 
 
-You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the `course_assignments` folder on the Desktop:
+You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the Desktop and create a new `homework` folder:
 
-> `cd ~/Desktop/course_assignments`
+`cd ~/Desktop/`
+`mkdir homework`
 
-Confirm that you made it into the `course_assignments` folder by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
+Navigate into this new folder using `cd homework`, and confirm that you made it in by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
 
 To start tracking this folder using git, enter the following command:
 
-> `git init`
+`git init`
 
-*Note*: this command only needs to be run when first setting up a new git repository.
+*Note*: this command only needs to be run when first setting up a new git repository.  
 
-It is good practice to initialize each git folder with a README file that explains the purpose of the repository. Your `course_assignments` folder already has a file `README.txt`. We can ask git to start tracking that file with the following command:
+It is good practice to initialize each git folder with a README file that explains the purpose of the repository. Create a README file in the homework folder with the command `touch README.txt`- this just creates an empty file. You can open this empty file using gedit (`gedit README.txt`). Edit this file to include your name, your year in college, your computing experience, and your lab section for this course.   
 
-> `git add README.txt`
-
-*Note*: this command needs to be run every time there is a version of a file (or subfolder) that we'd like to take a snapshot of with Git (e.g. `git add zebra_pictures` to take a snapshot of a folder called `zebra_pictures`).
+Next, we need to ask git to keep track of this file:  
+`git add README.txt`
 
 We can "commit" this file as a version that we want to save a snapshot off using the following command:
 
-> `git commit -m "initial commit: adding a barebones README file"`
+`git commit -m "initial commit: adding README file"`
 
 *Note*: `-m` is a *flag* that says that this particular commit should be made with the message "initial commit: adding a barebones README file". 
 
 
 You can look over the (brief) history of your git repository by asking to see its log:
 
-> `git log`
+`git log`
 
------------
-
-### Updating the readme and committing the changes
-
-Before moving on, we need to update the barebones `README.txt` to include some more information (e.g. your name, email address, lab section). 
-
-**Task**: Open up `README.txt` (through the terminal, using `gedit README.txt`, or by navigating to it in your desktop and double-clicking), and add the requested information. Then, take a snapshot of the file using `git add` and commit the changes with a message using `git commit` as above. Verify using `git log`. 
 
 -----
 
@@ -68,10 +60,10 @@ Log into your account on github, and click "New repository" on the right hand co
 
 *Note*: As it stands, you will need to enter your username and password every time you wish to use `git push`. Run the following two commands in your terminal to store your credentials for one hour (i.e. you will have to enter your username/pwd once every hour):
 
-> `# Set git to use the credential memory cache:`    
-> `git config --global credential.helper cache`    
-> 
-> `# Set the cache to timeout after 1 hour (setting is in seconds):`   
-> `git config --global credential.helper 'cache --timeout=3600'`    
+`# Set git to use the credential memory cache:`    
+`git config --global credential.helper cache`    
+
+`# Set the cache to timeout after 1 hour (setting is in seconds):`   
+`git config --global credential.helper 'cache --timeout=3600'`    
 
 If you now navigate to your new repository on github, you should see your assignments folder with a solid README. Congrats!
