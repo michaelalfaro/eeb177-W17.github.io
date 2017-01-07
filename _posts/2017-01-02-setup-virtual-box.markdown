@@ -23,7 +23,7 @@ Follow these steps to get your virtualbox going:
 5) Click next; this will take you to the Appliance Settings menu. Feel free to read through the appliance settings, and click "Next".   
 6) Importing the image will take a few minutes.   
 7) Once importing is complete, launch the virtualbox by double clicking on the "EEB177-Lubuntu" icon. **NOTE**: You will likey have an error the first time you try to launch your box, with the error message `A new node couldn't be inserted because one with the same name exists. (VERR_CFGM_NODE_EXISTS)`. Complete Step 8 below to work around this error.   
-8) Right-click on the "EEB177-Lubuntu" icon and select "Settings". Select "USB" in the settings menu. Un-check the "Enable USB controller" checkbox, and recheck the same box. Click OK to apply the settings.   
+8) Right-click on the "EEB177-Lubuntu" icon and select "Settings". Select "USB" in the settings menu. Un-check the "Enable USB controller" checkbox, and recheck the same box. Click OK to apply the settings. In Macs, this the "USB" settings are located within the "Ports" tab. 
 9) Double click on the icon to launch the virtualbox. You should see a series of black screens scroll by with some text; finally, you should see a dialog box with username "EEB-177-student". The password for this account is `yakyak`.   
 
 You should see a home screen that looks like this:
