@@ -69,7 +69,7 @@ If you'd like some more guidance on branches and reverting in git, check out [th
 
 1. Log into your github account and navigate to your EEB177 repository.   
 2. By default, github will show your the `master` repository when you log in. If you got through exercise 12 in Section 2, you should see `dummy-file` as one of the files in this master branch (remember, we deleted `dummy-file` in one commit, and reverted the deletion in the next commit!).  
-3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of yoru repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
+3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of your repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
 ![]({{ site.url }}/images/exercise1-githubrepo.png). Click on this link and explore your repository's commit history, making note of branch creations, etc.   
 4. Save a screenshot of your own repository's commit history to your `exercise-1` folder- make sure that you give the screenshot a useful name! Use git to add, commit, and push this new image.
 
