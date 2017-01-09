@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Week 1- Getting Started with Git and Github
+title: Week 0- Getting Started with Git and Github
 date:   2017-01-03
 author: Gaurav Kandlikar
 ---
