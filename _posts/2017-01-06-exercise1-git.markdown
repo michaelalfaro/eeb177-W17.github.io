@@ -13,7 +13,7 @@ Begin this (and all subsequent exercises in this course) by opening up a termina
 
 Before you begin, please read through [this helpful summary](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#_getting_started) on the basics of version control.
 
-0. Ensure that you have set up a git repository to track your `homework` folder and that this repository is connected to your github repository ([instructions]()).   
+0. Ensure that you have set up a git repository to track your `homework` folder and that this repository is connected to your github repository ([instructions](http://gaurav.kandlikar.com/eeb177-W17/2017/01/03/setup-github.html)).   
 1. Create a new subfolder called `exercise_1` and add this to the repositories tracked by git. Hint: use `mkdir` to make a new folder; use `git add <filename>` to start tracking it with git.  
 2. Navigate into `exercise_1` and create a readme file by executing `touch README.txt` (the command `touch` simply creates an empty file with a given name). Open `README.txt` and write in some information about this exercise (e.g. when you are completing this exercise, what are the goals of this exercise). Hint: you can use `sudo gedit <filename>` to open text files from the terminal.   
 3. Navigate back up to the `homework` directory and add the newly created `exercise_1/README.txt` file to the git repository.  
@@ -23,7 +23,7 @@ Before you begin, please read through [this helpful summary](https://git-scm.com
 5. Now, a snapshot of `exercise-1/README.txt` is present with the so-called staging-area of the git repository. Use `git commit` to commit this snapshot. Make sure that your commit includes a meaningful commit message! Use `git status` once again to verify that your commit was successful.    
 6. Push your current commits to your online github repository using `git push`. Visit your github repository through your browser and verify that your commits have gone through. Hint: this assumes that you have successfully completed the git and github setup - please see Gaurav if you have trouble with this part!  
 
-7. Return to the terminal, and within the `exercise-1` folder, create a file called `one-liner.txt` and write your favorite one-liner into this document. Follow the workflow above to add, commit, and push this to your github repo. Hint: Gaurav appreciates a good pun, especially if they relate to computing, ecology, or evolution.  
+7. Return to the terminal, and within the `exercise-1` folder, create a file called `one-liner.txt` and write your favorite one-liner into this document. Follow the workflow to add, commit, and push this to your github repo. Hint: Gaurav appreciates a good pun, especially if they relate to computing, ecology, or evolution.  
 
 8. Go back to `exercise-1/README.txt` and in this document add some text to this document. This can be anything you like- if you're out of ideas, tell me about your favorite restaurant in Westwood. Once this is saved, go through the same workflow to add, commit, and push your new changes to this file.
 
@@ -64,4 +64,12 @@ At this point, you have two distinct branches of your repository- essentially, t
 12. Run `git push` to push all of your work to Github, where I can view your commits and grade your work!  
 
 If you'd like some more guidance on branches and reverting in git, check out [this handy guide](https://www.atlassian.com/git/tutorials/undoing-changes/).
+
+### Section 3- Viewing your git history from Github
+
+1. Log into your github account and navigate to your EEB177 repository.   
+2. By default, github will show your the `master` repository when you log in. If you got through exercise 12 in Section 2, you should see `dummy-file` as one of the files in this master branch (remember, we deleted `dummy-file` in one commit, and reverted the deletion in the next commit!).  
+3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of yoru repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
+![]({{ site.url }}/images/exercise1-githubrepo.png). Click on this link and explore your repository's commit history, making note of branch creations, etc.   
+4. Save a screenshot of your own repository's commit history to your `exercise-1` folder- make sure that you give the screenshot a useful name! Use git to add, commit, and push this new image.
 

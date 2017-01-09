@@ -9,7 +9,7 @@ To minimize platform-related problems during this quarter, we will use a standar
 
 ### Download the course virtualbox image and VirtualBox software
 
-Download the EEB177 virtualbox image from [this link](https://ucla.box.com/s/p3y2xqqzujyciplvm23h6mkpup4zwjaz)[1]. *Note: this is a large file (~2gb), so prepare to be patient!* For now, place this file on your Desktop or at another easily-accessible location.
+Download the EEB177 virtualbox image from [this link](https://ucla.box.com/s/p3y2xqqzujyciplvm23h6mkpup4zwjaz). *Note: this is a large file (~2gb), so prepare to be patient!*  For now, place this file on your Desktop or at another easily-accessible location.
 
 Download and install the appropriate version of VirtualBox for your machine from this [link](https://www.virtualbox.org/wiki/Downloads). 
 
@@ -33,6 +33,8 @@ You should see a home screen that looks like this:
 If you're here, congrats! You have a functioning virtualbox! Complete the next few steps to add some more functionality to your environment: 
 
 - Launch the Firefox browser and ensure that you can connect to the internet.   
+- Launch the terminal (Start menu --> System Tools --> LXTerminal, or type cntrl+alt+T while on the desktop), and type in the command `sudo rstudio`. You will use this command to run rstudio every time. 
 
 
-[1]: https://ucla.box.com/s/p3y2xqqzujyciplvm23h6mkpup4zwjaz
+
+
