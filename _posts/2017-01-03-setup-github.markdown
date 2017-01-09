@@ -16,13 +16,12 @@ Before we use Git for the first time, we need to tell it our name and email addr
 We set up our name and email address with the following commands in the terminal:  
 
 `git config --global user.name "YOUR NAME"`  
-
 `git config --global user.email "YOUR EMAIL ADDRESS"`
 
 
-You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the Desktop and create a new `homework` folder:
-
-`cd ~/Desktop/`
+You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the Desktop and create a new `homework` folder:   
+ 
+`cd ~/Desktop/`   
 `mkdir homework`
 
 Navigate into this new folder using `cd homework`, and confirm that you made it in by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
