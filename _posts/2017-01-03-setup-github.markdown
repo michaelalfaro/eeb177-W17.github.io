@@ -9,9 +9,10 @@ author: Gaurav Kandlikar
 
 ### Setting up git locally
 
-Boot up your virtualbox and launch a terminal. You should be in the home directory- verify this by using `pwd` (i.e. "_P_ath of current _W_orking _D_irectory).
+Boot up your virtualbox and launch a terminal. You should be in the home directory- verify this by using `pwd` (i.e. "*P*ath of current *W*orking *D*irectory).
 
 Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- for example, here is a screenshot of one of Gaurav's repositories:
+
 ![]({{ site.url }}/images/git-screenshot.png)
 
 
