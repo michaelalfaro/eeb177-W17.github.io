@@ -19,12 +19,12 @@ We set up our name and email address with the following commands in the terminal
 `git config --global user.email "YOUR EMAIL ADDRESS"`
 
 
-You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the Desktop and create a new `homework` folder:   
+You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the eeb-177 folder on your Desktop and create a new `lab-work` folder:   
  
-`cd ~/Desktop/`   
-`mkdir homework`
+`cd ~/Desktop/eeb-177`   
+`mkdir lab-work`
 
-Navigate into this new folder using `cd homework`, and confirm that you made it in by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
+Navigate into this new folder using `cd lab-work`, and confirm that you made it in by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
 
 To start tracking this folder using git, enter the following command:
 
@@ -65,4 +65,4 @@ Set git to use the credential memory cache:
 Set the cache to timeout after 1 hour (setting is in seconds):  
 `git config --global credential.helper 'cache --timeout=3600'`    
 
-If you now navigate to your new repository on github, you should see your assignments folder with a solid README. Congrats!
+If you now navigate to your new repository on github, you should see your lab-work folder with the README file that you wrote. Congrats!

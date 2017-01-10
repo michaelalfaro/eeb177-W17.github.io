@@ -7,16 +7,16 @@ author: Gaurav Kandlikar
 
 In this exercise, you will go through the "`git add`, `git commit`, `git push`" workflow. In Section 2 of this exercise, you will explore the use of branches and reverts to previous commits.
 
-Begin this (and all subsequent exercises in this course) by opening up a terminal window and navigating to your `homework` folder. 
+Begin by opening up a terminal window and navigating to your `lab-work` folder. 
 
 ### Section 1- adding, commiting, and pushing to github
 
 Before you begin, please read through [this helpful summary](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#_getting_started)<sup>0</sup> on the basics of version control.
 
-0. Ensure that you have set up a git repository to track your `homework` folder and that this repository is connected to your github repository ([instructions](http://gaurav.kandlikar.com/eeb177-W17/2017/01/03/setup-github.html))<sup>1</sup>.   
+0. Ensure that you have set up a git repository to track your `lab-work` folder and that this repository is connected to your github repository ([instructions](http://gaurav.kandlikar.com/eeb177-W17/2017/01/03/setup-github.html))<sup>1</sup>.   
 1. Create a new subfolder called `exercise_1` and add this to the repositories tracked by git. Hint: use `mkdir` to make a new folder; use `git add <filename>` to start tracking it with git.  
 2. Navigate into `exercise_1` and create a readme file by executing `touch README.txt` (the command `touch` simply creates an empty file with a given name). Open `README.txt` and write in some information about this exercise (e.g. when you are completing this exercise, what are the goals of this exercise). Hint: you can use `sudo gedit <filename>` to open text files from the terminal.   
-3. Navigate back up to the `homework` directory and add the newly created `exercise_1/README.txt` file to the git repository.  
+3. Navigate back up to the `lab-work` directory and add the newly created `exercise_1/README.txt` file to the git repository.  
 4. View the status of your git repository using `git status`. You should see something that looks like this: 
 ![]({{ site.url }}/images/exercise1-gitstatus.png)
 
@@ -29,7 +29,16 @@ Before you begin, please read through [this helpful summary](https://git-scm.com
 
 Verify that you have completed three commits in this section by looking at the output of `git log`.
 
-### Section 2- Branching, merging, removing files, and undoing commits
+
+### Section 2- Viewing your git repository from Github
+
+1. Log into your github account and navigate to your EEB177 repository.   
+2. By default, github will show your the `master` repository when you log in. If you got through exercise 12 in Section 2, you should see `dummy-file` as one of the files in this master branch (remember, we deleted `dummy-file` in one commit, and reverted the deletion in the next commit!).  
+3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of your repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
+![]({{ site.url }}/images/exercise1-githubrepo.png). Click on this link and explore your repository's commit history, etc.   
+4. Save a screenshot of your own repository's commit history to your `exercise-1` folder- make sure that you give the screenshot a useful name! Use git to add, commit, and push this new image.   
+
+### Section 3- Branching, merging, removing files, and undoing commits
 
 In this section, you will learn:
 - how (and when) to create new *branches* in a git repository     
@@ -65,14 +74,11 @@ At this point, you have two distinct branches of your repository- essentially, t
 
 If you'd like some more guidance on branches and reverting in git, check out [this handy guide](https://www.atlassian.com/git/tutorials/undoing-changes/)<sup>3</sup>.
 
-### Section 3- Viewing your git repository from Github
+### Homework
 
-1. Log into your github account and navigate to your EEB177 repository.   
-2. By default, github will show your the `master` repository when you log in. If you got through exercise 12 in Section 2, you should see `dummy-file` as one of the files in this master branch (remember, we deleted `dummy-file` in one commit, and reverted the deletion in the next commit!).  
-3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of your repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
-![]({{ site.url }}/images/exercise1-githubrepo.png). Click on this link and explore your repository's commit history, making note of branch creations, etc.   
-4. Save a screenshot of your own repository's commit history to your `exercise-1` folder- make sure that you give the screenshot a useful name! Use git to add, commit, and push this new image.   
-5. Return to your repository home screen, and find how to switch to `dummy-branch` from `master`. Take a look at the commit history of this branch.
+1. Within your `eeb-177` folder, make a new folder called `01-my-favorite-animals`. Track this folder as a new git repository. To this folder, add the following documents: a) a README file that lists your top 5 favorite animals, b) a picture of each of your top 5 favorite animals, and c) a text document that shows the links at which you found the pictures. Add and commit all of these files to git. Make a new repository in your github account, and push your local repository through to github. This repository should have at least three commits.    
+2. Clone my (i.e. Gaurav's) `my-favorite-animal` (https://github.com/gauravsk/my-fav-animas) repository into your `eeb-177` folder. Add a screenshot to show that you have made this clone, and commit this screenshot to your own `01-my-favorite-aniamls` folder. 
+
 
 <sup>0</sup> https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#_getting_started   
 <sup>1</sup> http://gaurav.kandlikar.com/eeb177-W17/2017/01/03/setup-github.html   
