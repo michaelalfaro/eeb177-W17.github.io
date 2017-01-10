@@ -9,22 +9,32 @@ author: Gaurav Kandlikar
 
 ### Setting up git locally
 
-Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- note the author line on my git log:
+Boot up your virtualbox and launch a terminal. You should be in the home directory- verify this by using `pwd` (i.e. "_P_ath of current _W_orking _D_irectory).
+
+Before we use Git for the first time, we need to tell it our name and email address. This allows your commits to have an author and a contact- for example, here is a screenshot of one of Gaurav's repositories:
 ![]({{ site.url }}/images/git-screenshot.png)
 
 
-We set up our name and email address with the following commands in the terminal:  
+You can set up your name and email address with the following commands in the terminal:  
 
 `git config --global user.name "YOUR NAME"`  
 `git config --global user.email "YOUR EMAIL ADDRESS"`
 
 
-You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the eeb-177 folder on your Desktop and create a new `lab-work` folder:   
- 
-`cd ~/Desktop/eeb-177`   
-`mkdir lab-work`
+You can now use Git to do version control locally through your command line- hurray! To start using Git, use your terminal to navigate to the Desktop using the `cd` (i.e. "change directory") command and create a new `eeb-177` folder using `mkdir` (i.e. make directory). **Note**: some of you may have done this step already if you were following along in lecture on Tuesday:  
 
-Navigate into this new folder using `cd lab-work`, and confirm that you made it in by entering the command `pwd`. This command returns the path to the current working directory. We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
+`cd Desktop`   
+`mkdir eeb-177`   
+Then, you can switch into the newly made folder by using `cd eeb-177`. 
+
+If you had already made the `eeb-177` folder during lecture, simply navigate to it (i.e. `cd Desktop`; then `cd eeb-177`).   
+
+Within this folder, you will now make a "lab-work" folder that will include exercise you do during lab:  
+
+`mkdir lab-work`  
+
+
+Navigate into this new folder using `cd lab-work`, and confirm that you made it in by entering the command `pwd` (The output of `pwd` should be  `home/eeb177-student/Desktop/eeb-177/lab-work`). We want this folder to be tracked using git: for each weeks assignment, you are to make a new subfolder within this folder and use Git+Github to have the weekly subfolders pushed through to github. 
 
 To start tracking this folder using git, enter the following command:
 
