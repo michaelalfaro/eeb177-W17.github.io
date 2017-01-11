@@ -79,6 +79,8 @@ If you'd like some more guidance on branches and reverting in git, check out [th
 
 ### Homework
 
+<p style="color:#872623">Note: all of the following commits should be done <b>on or after</b> Sunday, 14 January</p>
+
 1. Within your `eeb-177` folder, make a new folder called `01-my-favorite-animals`. Track this folder as a new git repository. To this folder, add the following documents: a) a README file that lists your top 5 favorite animals, b) a picture of each of your top 5 favorite animals, and c) a text document that shows the links at which you found the pictures. Add and commit all of these files to git. Make a new repository in your github account, and push your local repository through to github. This repository should have at least three commits.    
 2. Clone my (i.e. Gaurav's) `my-favorite-animal` (https://github.com/gauravsk/my-fav-animals.git) repository into your `eeb-177` folder. Add a screenshot to show that you have made this clone to your own `01-my-favorite-animals` folder, and commit and push the screenshot so that I can view it on Github. 
 
