@@ -33,7 +33,7 @@ Verify that you have completed three commits in this section by looking at the o
 ### Section 2- Viewing your git repository from Github
 
 1. Log into your github account and navigate to your EEB177 repository.   
-2. By default, github will show your the `master` repository when you log in. If you got through exercise 12 in Section 2, you should see `dummy-file` as one of the files in this master branch (remember, we deleted `dummy-file` in one commit, and reverted the deletion in the next commit!).  
+2. By default, github will show your the `master` branch when you log in. Once you complete Section 3, you will have the option to switch over to the new branch if neeed. 
 3. You can look at the changes made in your repository by clicking on the commit history option in the top panel of your repository (See "25 Commits" highlighted in green at the top-left of the screenshot below):
 ![]({{ site.url }}/images/exercise1-githubrepo.png). Click on this link and explore your repository's commit history, etc.   
 4. Save a screenshot of your own repository's commit history to your `exercise-1` folder- make sure that you give the screenshot a useful name! Use git to add, commit, and push this new image.   
