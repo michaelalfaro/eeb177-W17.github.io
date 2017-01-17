@@ -13,7 +13,7 @@ Begin by opening up a terminal window and navigating to your `lab-work` folder.
 
 Before you begin, please read through [this helpful summary](https://git-scm.com/book/en/v2/Getting-Started-About-Version-Control#_getting_started)<sup>0</sup> on the basics of version control.
 
-0. Ensure that you have set up a git repository to track your `lab-work` folder and that this repository is connected to your github repository ([instructions](http://gaurav.kandlikar.com/eeb177-W17/2017/01/03/setup-github.html))<sup>1</sup>.   
+0. Ensure that you have set up a git repository to track your `lab-work` folder and that this repository is connected to your github repository ([instructions](https://eeb177-W17.github.io/2017/01/03/setup-github.html))<sup>1</sup>.   
 1. Create a new subfolder called `exercise-1` and add this to the repositories tracked by git. Hint: use `mkdir` to make a new folder; use `git add <filename>` to start tracking it with git.  
 2. Navigate into `exercise-1` and create a readme file by executing `touch README.txt` (the command `touch` simply creates an empty file with a given name). Open `README.txt` and write in some information about this exercise (e.g. when you are completing this exercise, what are the goals of this exercise). Hint: you can use `sudo gedit <filename>` to open text files from the terminal.   
 3. Navigate back up to the `lab-work` directory and add the newly created `exercise-1/README.txt` file to the git repository.  
@@ -53,7 +53,7 @@ Note: You probably won't need to be doing most of these during this course, but 
 
 **Before you begin, please read through [this helpful page](https://git-scm.com/book/en/v2/Git-Branching-Branches-in-a-Nutshell)<sup>2</sup> on branching in git repositories.** The Allesina text also has a good summary of branching in git.  
 
-1. Navigate to the `homework` folder and run `git branch` to check which branch you are currently on. Unless you have already made a new branch, you should see that your repository only has the `master` branch, and the asterisk indicates that you are currently on that branch.  
+1. Navigate to the `lab-work` folder and run `git branch` to check which branch you are currently on. Unless you have already made a new branch, you should see that your repository only has the `master` branch, and the asterisk indicates that you are currently on that branch.  
 2. Use `git checkout -b dummy-branch` to make a new branch called `dummy-branch` within the repository.
 3. Check that you are on the `dummy-branch` (how would you do this?).  
 4. Navigate into the `exercise-1` folder and run `touch dummy-file`. Navigate back to the `homework` folder, and go through the "add, commit, push" workflow to add this new `dummy-file` to your git repository. 
