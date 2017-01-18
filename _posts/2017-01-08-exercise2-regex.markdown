@@ -18,11 +18,9 @@ pre {
 
 1. Navigate in your virtualbox to `cd ~/Desktop/eeb-177/lab-work`. Here, create a new directory called `exercise-2` (hint: use `mkdir` to make a directory). 
 
-2. Navigate into the `exercise-2` folder create a README file using `touch README.txt`. Edit this file to include your name and a brief explanation that this week, we are working on regular expressions. Use `git init` to start tracking this folder as a new project - your regular expressions project! 
+2. Navigate into the `exercise-2/` folder create a README file using `touch README.txt`. Edit this file to include your name and a brief explanation that this week, we are working on regular expressions. 
 
-3. In your github account, make a new repository named `week2-regex`, and link this to your local repository in the `exercise-2` folder (hint: use `git remote set-origin <link>` to link the local and github repositories). 
-
-4. Use the git Add-Commit-Push workflow to save your README.txt. You should be able to see the contents of your readme file in your newly created github repository if this went well.  
+4. Use the git Add-Commit-Push workflow to add the new `exercise-2/` folder to git. You should be able to see the contents of your readme file in your lab work repository on github if things went well.  
 
 5.  Complete all fifteen lessons on the RegexOne online tutorial ([link](https://regexone.com/lesson/introduction_abcs))<sup>0</sup>. Along the way, take screenshots of your completed work for **Lesson 2**, **Lesson 7**, **Lesson 12**, and **Lesson 14** and save these in your `exercise-2` folder.   
 NOTE: This is a super intensive tutorial that covers a lot of information. Please don't try to rush through it- read the commentary on every page!
