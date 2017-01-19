@@ -20,7 +20,7 @@ Before you begin, please read through [this helpful summary](https://git-scm.com
 4. View the status of your git repository using `git status`. You should see something that looks like this: 
 ![]({{ site.url }}/images/exercise1-gitstatus.png)
 
-5. Now, a snapshot of `exercise-1/README.txt` is present with the so-called staging-area of the git repository. Use `git commit` to commit this snapshot. Make sure that your commit includes a meaningful commit message! Use `git status` once again to verify that your commit was successful.    
+5. Now, a snapshot of `exercise-1/README.txt` is present with the so-called staging-area of the git repository. Use `git commit -m "MESSAGE"` to commit this snapshot. Make sure that your commit includes a meaningful commit message! Use `git status` once again to verify that your commit was successful.    
 6. Push your current commits to your online github repository using `git push`. Visit your github repository through your browser and verify that your commits have gone through. Hint: this assumes that you have successfully completed the git and github setup - please see Gaurav if you have trouble with this part!  
 
 7. Return to the terminal, and within the `exercise-1` folder, create a file called `one-liner.txt` and write your favorite one-liner into this document. Follow the workflow to add, commit, and push this to your github repo. Hint: Gaurav appreciates a good pun, especially if they relate to computing, ecology, or evolution.  
