@@ -1,0 +1,605 @@
+---
+layout: post
+title: Week 4- Fun with loops in python
+date:   2017-02-01
+author: Gaurav Kandlikar
+---
+
+<b>Note: you can download this ipython notebook <a href = https://github.com/eeb177-W17/eeb177-W17.github.io/tree/master/weekly_content/week4/Exercise-4.ipynb>here</a> </b>
+
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Setup">Setup<a class="anchor-link" href="#Setup">&#182;</a></h3><p>Download a copy of this ipython notebook from Gaurav's github and save it in the folder <code>~/Desktop/eeb-177/lab-work/exercise-4</code>. Navigate to that folder in your terminal and use <code>git</code> to add, commit and push the blank file. Launch jupyter notebook and complete the exercises below. At the end of class, re-commit the final version of the file with your answers.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Exercise-4--Loops!">Exercise 4- Loops!<a class="anchor-link" href="#Exercise-4--Loops!">&#182;</a></h2><p>Often times we wish to run the same few lines of code many many times- for example, we might want to generate estimates of speciation and extinction rates for all plant genera in our database, or we might want to play our rock-paper-scissors game from last week a thousand times.</p>
+<p>There are two (well, probably more) ways to do this: we could just write the same line of code over and over again, or we could write a single <code>for</code> loop. For reasons that should become obvious soon, the second option is vastly preferrable.</p>
+<p>Let's begin with the first approach to see why.</p>
+<hr>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Part-1">Part 1<a class="anchor-link" href="#Part-1">&#182;</a></h3><p>Answer the following questions <strong>without using any for loops</strong></p>
+<h5 id="Question-1">Question 1<a class="anchor-link" href="#Question-1">&#182;</a></h5><p>Write python code that will produce an output that looks like this:</p>
+<pre>
+Liftoff in 10 seconds
+Liftoff in 9 seconds
+Liftoff in 8 seconds
+Liftoff in 7 seconds
+Liftoff in 6 seconds
+Liftoff in 5 seconds
+Liftoff in 4 seconds
+Liftoff in 3 seconds
+Liftoff in 2 seconds
+Liftoff in 1 seconds
+</pre>
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<span class="c1"># NO LOOPS, PLEASE!</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Question-2">Question 2<a class="anchor-link" href="#Question-2">&#182;</a></h5><p>Write some code that will compute the sum of the squares of numbers from 1 to 8 (i.e. 1^2 + 2^2...8^2)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<span class="c1"># NO LOOPS, PLEASE</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Question-3">Question 3<a class="anchor-link" href="#Question-3">&#182;</a></h5><p>Let's say that you have three strings called <code>s0</code>, <code>s1</code>, and <code>s2</code> that have the following contents:</p>
+<pre>
+s0 is "atgtaca"
+s1 is "atttaca"
+s2 is "attttca"
+</pre><p>Write some code that will do the following:<br>
+1) Define the variables <code>s0</code>, <code>s1</code>, and <code>s2</code> as above.<br>
+2) Count the number of times the character <code>t</code> appears in each object (the answer should be 2, 3, 4)</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<span class="c1"># NO LOOPS PLEASE</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Question-4">Question 4<a class="anchor-link" href="#Question-4">&#182;</a></h5><p>Make a list that contains eight elements, which are the squares of the numbers from 1 to 8. In other words, your list should contain the elements (1, 4, 9, ... 64).</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># your code here</span>
+<span class="c1"># NO LOOPS PLEASE</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<hr>
+<h3 id="Performing-these-tasks-more-efficiently-with-For-loops">Performing these tasks more efficiently with For loops<a class="anchor-link" href="#Performing-these-tasks-more-efficiently-with-For-loops">&#182;</a></h3><p>In each of the previous exercises, you had to write multiple lines of code that performed slight variations on the same task (e.g. count the number of <code>t</code>s, square a number, etc. If you find yourself writing a lot of lines of code that use the same python function, you're probably better off writing a loop.</p>
+<p>There are a couple of types of loops in python. We begin by exploring <code>for</code> loops, and introduce <code>while</code> loops next.</p>
+<h4 id="For-loops">For loops<a class="anchor-link" href="#For-loops">&#182;</a></h4><p>In many cases, you need to repeat a task many times, and you know exactly how many times you need it to be done. For example, you knew in Question 1 above that you wanted to print 10 lines, and you knew in Question 3 that you wanted to know the number of <code>t</code>s in three objects. <code>for</code> loops are ideal in these situations because the content in a for loop is repeated a set number of times.</p>
+<p><code>for</code> loops take the following form:</p>
+
+<pre><code>for &lt;variable&gt; in &lt;set_to_iterate_over&gt;:
+    perform task(s)</code></pre>
+<p>Note that <code>&lt;variable&gt;</code> and <code>&lt;set_to_iterate_over&gt;</code> are placeholders! The content of the <code>for</code> loop is run as many times as there are items in <code>&lt;set_to_iterate_over&gt;</code>, and each time through the loop, <code>&lt;variable&gt;</code> takes on the next value in the <code>&lt;set_to_iterate_over&gt;</code>. This might make more sense with an example:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># For each item in my decadent breakfast (I wish!)</span>
+<span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="p">[</span><span class="s2">&quot;coffee&quot;</span><span class="p">,</span> <span class="s2">&quot;bagel&quot;</span><span class="p">,</span> <span class="s2">&quot;eggs&quot;</span><span class="p">,</span> <span class="s2">&quot;strawberries&quot;</span><span class="p">,</span> <span class="s2">&quot;orange juice&quot;</span><span class="p">,</span> <span class="s2">&quot;cinnamon roll&quot;</span><span class="p">]:</span>
+    <span class="c1"># print a line the item&#39;s virtues</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;I had &quot;</span> <span class="o">+</span> <span class="n">item</span> <span class="o">+</span> <span class="s2">&quot; for breakfast&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;it was super yummy!&quot;</span><span class="p">)</span>
+    <span class="c1"># print an empty line</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>I had coffee for breakfast
+it was super yummy!
+
+
+I had bagel for breakfast
+it was super yummy!
+
+
+I had eggs for breakfast
+it was super yummy!
+
+
+I had strawberries for breakfast
+it was super yummy!
+
+
+I had orange juice for breakfast
+it was super yummy!
+
+
+I had cinnamon roll for breakfast
+it was super yummy!
+
+
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Revisiting-Question-1">Revisiting Question 1<a class="anchor-link" href="#Revisiting-Question-1">&#182;</a></h5><p>In question 1 above, I asked you to write code that would create the following output:</p>
+<pre>
+Liftoff in 10 seconds
+Liftoff in 9 seconds
+Liftoff in 8 seconds
+Liftoff in 7 seconds
+Liftoff in 6 seconds
+Liftoff in 5 seconds
+Liftoff in 4 seconds
+Liftoff in 3 seconds
+Liftoff in 2 seconds
+Liftoff in 1 seconds
+</pre><p>We can achieve this task by making <code>&lt;set_to_iterate_over&gt;</code> the numbers from 10 to 1, and <code>&lt;variable&gt;</code> equal to each item in the set.</p>
+<p>We can make a variable <code>set_to_iterate_over</code> that contains a list from 10 to 1:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Create a set of numbers</span>
+<span class="n">set_to_iterate_over</span> <span class="o">=</span> <span class="p">[</span><span class="mi">10</span><span class="p">,</span> <span class="mi">9</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span><span class="mi">7</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="n">current_number</span> <span class="ow">in</span> <span class="n">set_to_iterate_over</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liftoff in &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; seconds&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>Much better!</p>
+<p>We can also use the <code>range()</code> function in Python to create a list of numbers rather than writing it out:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Loop over a range</span>
+<span class="c1"># The function range() makes a range from the first argument to the second</span>
+<span class="c1"># For ranges in decreasing order, we need to add the argument `-1`</span>
+<span class="c1"># Another quirk about the range function:</span>
+<span class="c1"># It is inclusive of the first bound of the range, but not of the second bound</span>
+<span class="c1"># For example, range(0, 5) goes 0, 1, 2, 3, 4</span>
+<span class="c1"># For example, range(5, 1) goes 5, 4, 3, 2</span>
+
+<span class="k">for</span> <span class="n">current_number</span> <span class="ow">in</span> <span class="nb">list</span><span class="p">(</span><span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="o">-</span><span class="mi">1</span><span class="p">)):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liftoff in &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_number</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; seconds&quot;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liftoff in 10 seconds
+Liftoff in 9 seconds
+Liftoff in 8 seconds
+Liftoff in 7 seconds
+Liftoff in 6 seconds
+Liftoff in 5 seconds
+Liftoff in 4 seconds
+Liftoff in 3 seconds
+Liftoff in 2 seconds
+Liftoff in 1 seconds
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Revisiting-question-2">Revisiting question 2<a class="anchor-link" href="#Revisiting-question-2">&#182;</a></h5><p>In question 2 above I ask you to write some code that will compute the sum of the squares of numbers from 1 to 8 (i.e. 1^2 + 2^2...8^2).</p>
+<p>We can achieve this with a <code>for</code> loop as well. In this case we initiate a variable called <code>total</code> that is initiall set to <code>0</code>, and that gets incremented each time through the loop.</p>
+<p><strong>Please fill in the body of the loop in the following code chunk</strong></p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">total</span> <span class="o">=</span> <span class="mi">0</span>
+
+<span class="c1"># replace the XXXs with the correct code!</span>
+<span class="k">for</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="c1"># compute the square value </span>
+    <span class="n">square</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span>  <span class="c1"># This should compute the square of XXX</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">total</span> <span class="o">+</span> <span class="n">square</span> <span class="c1"># Increment the old value of total by the value square</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;current total is: &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">total</span><span class="p">))</span>           <span class="c1"># This prints out the cumulative total</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">total</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Revisiting-question-3">Revisiting question 3<a class="anchor-link" href="#Revisiting-question-3">&#182;</a></h5><p>In question 3 I ask you to count the number of <code>t</code>s in each of the following strings:</p>
+<pre>
+s0 is "atgtaca"
+s1 is "atttaca"
+s2 is "attttca"
+</pre><p>We can use a for loop to perform this task by making a list <code>set_to_iterate_over</code> whose elements are the sequences we are interested in. Modify the following loop as needed:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">set_to_iterate_over</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;atgtaca&quot;</span><span class="p">,</span> <span class="s2">&quot;atttaca&quot;</span><span class="p">,</span> <span class="s2">&quot;attttca&quot;</span><span class="p">]</span>
+
+<span class="k">for</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span> <span class="ow">in</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span><span class="p">:</span>
+    <span class="n">current_count</span> <span class="o">=</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;.</span><span class="n">count</span><span class="p">(</span><span class="s1">&#39;t&#39;</span><span class="p">)</span>
+    <span class="c1"># The next print statement should print lines that look like:</span>
+    <span class="c1"># &quot;There are 2 ts in the sequence atgtaca</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;There are &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_count</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; ts in the sequence &quot;</span> <span class="o">+</span> <span class="o">&lt;</span><span class="n">replace_me</span><span class="o">&gt;</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Revisiting-question-4">Revisiting question 4<a class="anchor-link" href="#Revisiting-question-4">&#182;</a></h5><p>In question 4 I asked you to make a list that contains eight elements, which are the squares of the numbers from 1 to 8. In other words, your list should contain the elements (1, 4, 9, ... 64).</p>
+<p>Let's explore how to do this with a loop. Any object of type <code>list</code> in python has a method called <code>append</code>.  For example, if we have a list called <code>my_favorite_animals</code> with our top 4 favorite animals, we can run <code>my_fav_animals.append("&lt;fifth fav animal&gt;)</code> to add a fifth animal to the list:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_fav_animals</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;monocled cobras&quot;</span><span class="p">,</span> <span class="s2">&quot;rock hyrax&quot;</span><span class="p">,</span> <span class="s2">&quot;puffins&quot;</span><span class="p">,</span> <span class="s2">&quot;long beaked echidna&quot;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_fav_animals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;monocled cobras&#39;, &#39;rock hyrax&#39;, &#39;puffins&#39;, &#39;long beaked echidna&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="n">my_fav_animals</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;axolotl&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">my_fav_animals</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>[&#39;monocled cobras&#39;, &#39;rock hyrax&#39;, &#39;puffins&#39;, &#39;long beaked echidna&#39;, &#39;axolotl&#39;]
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p>We can use this approach to <em>populate</em> a list through a <code>for</code> loop- each time through the loop, something new is appended to the list.</p>
+<p>The next code chunk gets you started by creating an empty list; your task is to write a <code>for</code> loop that will populate it with the squares of the numbers from 1 to 8.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># create an empty list</span>
+<span class="c1"># eventually, this list should look like:</span>
+<span class="c1"># [1, 4, 9, 16, 25, 36, 49, 64]</span>
+<span class="n">list_of_squares</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="c1"># Write a for loop here to populate list_of_squares.</span>
+
+<span class="c1"># After your for loop, print the list to make sure it worked:</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">list_of_squares</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="While-loops">While loops<a class="anchor-link" href="#While-loops">&#182;</a></h3><p><code>for</code> loops are most relevant when you know exactly how many times you wish to repeat a task. But sometimes, you just know that you want to repeat a task until some condition is met. For example, you might want to keep playing your rock-paper-scissors game until you have won 100 games. Who knows how long this will take!</p>
+<h5 id="Revisiting-question-1-again,-this-time-with-while-loops">Revisiting question 1 again, this time with while loops<a class="anchor-link" href="#Revisiting-question-1-again,-this-time-with-while-loops">&#182;</a></h5><p>The following while loop recreates the liftoff from Question 1 by checking on the condition "time_left &gt; 0". If there is more than 0 seconds left until lift off, we want to print <code>Liftoff in n seconds</code>:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># start countdown at 10 seconds</span>
+<span class="n">current_time</span> <span class="o">=</span> <span class="mi">10</span>
+
+<span class="k">while</span> <span class="n">current_time</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="c1"># print the printout statement</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Liftoff in &quot;</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">current_time</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; seconds&quot;</span><span class="p">)</span>
+    <span class="c1"># change the current_time to be equal to the current_time - 1</span>
+    <span class="n">current_time</span> <span class="o">=</span> <span class="n">current_time</span> <span class="o">-</span> <span class="mi">1</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area"><div class="prompt"></div>
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Liftoff in 10 seconds
+Liftoff in 9 seconds
+Liftoff in 8 seconds
+Liftoff in 7 seconds
+Liftoff in 6 seconds
+Liftoff in 5 seconds
+Liftoff in 4 seconds
+Liftoff in 3 seconds
+Liftoff in 2 seconds
+Liftoff in 1 seconds
+</pre>
+</div>
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong><em>IMPORTANT</em></strong>: You can get stuck in infinite while-loops if you forget to update your condition! For example, if I left out the line <code>current_time = current_time - 1</code> from the previous loop, <code>current_time</code> would always be equal to <code>10</code>, so the condition of the while loop will always be true, so the loop will never end!</p>
+<p>If you find yourself in an infinite loop, press <code>control + C</code>.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h5 id="Revisiting-question-4-again,-this-time-with-while-loops">Revisiting question 4 again, this time with while loops<a class="anchor-link" href="#Revisiting-question-4-again,-this-time-with-while-loops">&#182;</a></h5><p>In question 4 I asked you to make a list that contains eight elements, which are the squares of the numbers from 1 to 8. In other words, your list should contain the elements (1, 4, 9, ... 64).</p>
+<p>Use what you have learned to perform this task with a <code>while</code> loop:</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython3"><pre><span></span><span class="c1"># Your code here</span>
+<span class="c1"># Complete the task in q4 with a while loop</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h2 id="Homework">Homework<a class="anchor-link" href="#Homework">&#182;</a></h2><ol>
+<li><p>Write a for-loop that prints out the numbers from 100 to 110.</p>
+</li>
+<li><p>Write a while- loop that prints out the numbers from 100 to 110.</p>
+</li>
+<li><p>Write a loop that prints out the squares of the numbers from 10-15. This can be a for or a while loop.</p>
+</li>
+<li><p>Write a loop that iterates over the list ["Scooby", "Shaggy", "Velma", "Daphne", "Fred"] and for each character prints the statement "XXX is a character in that most glorious of cartoons, Scooby Doo".</p>
+</li>
+<li><p>Write a function that meets the following criteria:</p>
+</li>
+</ol>
+<pre>
+1. The function must be named "fact_or_sum"   
+2. The function must take in one input, which must be an integer. If the user inputs a string, the function should return an error message.
+3. If the input integer is 0, the function returns the number 0.  
+4. If the input integer is an odd number, the function returns the factorial of the number. 
+4a. A factorial is computed as the product of a number and each integer below that number, until 1 (e.g. n*(n-1)*(n-2)...*1)
+5. The factorial MUST be computed with a for loop. 
+6. If the input integer is an even number, the function returns the sum of that number and all numbers below it, until 1 (e.g. n+(n-1)+(n-2)...+1).
+6a. The sum must be computed with a while loop.
+</pre>
+</div>
+</div>
+</div>
