@@ -5,7 +5,7 @@ permalink: /lectures/
 ---
 
 Homework 4:  [link]({{ site.url }}lecture_pdfs/hw4.pdf)    
-Lecture 9:  [link]({{ site.url }}lecture_pdfs/lecture-8-Fed-2-2017.pdf)    
+Lecture 9:  [link]({{ site.url }}lecture_pdfs/lecture-8-Feb-2-2017.pdf)    
 Final project update: [link]({{ site.url }}lecture_pdfs/final-project-update.pdf)    
 Lecture 7:  [link]({{ site.url }}lecture_pdfs/lecture-7-Jan-31-2017.pdf)    
 
