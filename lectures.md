@@ -4,6 +4,8 @@ title: Lecture PDFs + HW
 permalink: /lectures/
 ---
 
+Homework 5:  [link]({{ site.url }}lecture_pdfs/hw5.pdf)    
+Lecture 10:  [link]({{ site.url }}lecture_pdfs/lecture-10-Feb-9-2017.pdf)    
 Lecture 9:  [link]({{ site.url }}lecture_pdfs/lecture-9-Feb-7-2017.pdf)    
 
 Homework 4:  [link]({{ site.url }}lecture_pdfs/hw4.pdf)    
