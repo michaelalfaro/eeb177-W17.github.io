@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Lecture 14- Web Scraping in Python
+title: Lecture 14- Three ways to scrape the web
 date:   2017-02-23
 author: Jonathan Chang
 ---
@@ -96,15 +96,15 @@ We want a list of all the current names for this family. Use the Inspector to ob
 First install the `beautifulsoup` Python library.
 
 ```
-sudo apt-get install python-bs4
+conda install -c anaconda beautifulsoup
 ```
 
 Now start up Python notebook.
 
-These lines load up the modules we'll need to download things from the web (`urllib2`) and to parse the HTML that comes out of it (`bs4`).
+These lines load up the modules we'll need to download things from the web (`urllib`) and to parse the HTML that comes out of it (`bs4`).
 
 ```python
-import urllib2
+import urllib.request
 from bs4 import BeautifulSoup
 ```
 
@@ -117,7 +117,7 @@ family_url = "http://www.fishbase.org/Nomenclature/NominalSpeciesList.php?family
 This works just like a `open()` does with a file on your local computer. Python will download the contents of your link when you call `html.read()`.
 
 ```python
-html = urllib2.urlopen(family_url)
+html = urllib.request.urlopen(family_url)
 html_doc = html.read()
 html.close()
 ```
@@ -157,20 +157,20 @@ We need to loop over all of the `<i>` tags, so we use a second level `for` loop 
 Now we can just write out the species name:
 
 ```python
-        print italic.string
+        print(italic.string)
 ```
 
 All together, the code looks like this:
 
 ```python
-import urllib2
+import urllib.request
 from bs4 import BeautifulSoup
 
 family_url = "http://www.fishbase.org/Nomenclature/NominalSpeciesList.php?family=Abyssocottidae"
 # some students will have used this page instead. the code works for both
 # family_url = "http://www.fishbase.us/identification/specieslist.php?famcode=584"
 
-html = urllib2.urlopen(family_url)
+html = urllib.request.urlopen(family_url)
 html_doc = html.read()
 
 soup = BeautifulSoup(html_doc)
@@ -182,7 +182,7 @@ for link in links:
     italics = link.find_all("i")
     for italic in italics:
         # this should be the species name
-        print italic.string
+        print(italic.string)
 ```
 
 ### Exercise 2: 
