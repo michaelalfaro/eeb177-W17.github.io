@@ -1,3 +1,10 @@
+---
+layout: post
+title: Lecture 14- Web Scraping in Python
+date:   2017-02-23
+author: Jonathan Chang
+---
+
 # Web Scraping Three Ways, a recipe
 
 **Problem:** people post data on their websites and don't provide a download. You are too <s>lazy</s> busy to manually copy down the data into Excel or something. 
