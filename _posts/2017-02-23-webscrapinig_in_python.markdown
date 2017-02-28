@@ -96,12 +96,12 @@ We want a list of all the current names for this family. Use the Inspector to ob
 First install the `beautifulsoup` Python library.
 
 ```
-conda install -c anaconda beautifulsoup
+conda install -c anaconda beautifulsoup4
 ```
 
 Now start up Python notebook.
 
-These lines load up the modules we'll need to download things from the web (`urllib`) and to parse the HTML that comes out of it (`bs4`).
+These lines load up the modules we'll need to download things from the web (`urllib.request`) and to parse the HTML that comes out of it (`bs4`).
 
 ```python
 import urllib.request
@@ -157,7 +157,7 @@ We need to loop over all of the `<i>` tags, so we use a second level `for` loop 
 Now we can just write out the species name:
 
 ```python
-        print(italic.string)
+        print italic.string
 ```
 
 All together, the code looks like this:
@@ -182,7 +182,7 @@ for link in links:
     italics = link.find_all("i")
     for italic in italics:
         # this should be the species name
-        print(italic.string)
+        print italic.string
 ```
 
 ### Exercise 2: 
@@ -208,13 +208,14 @@ What's all this?! This is JSON format, short for Javascript object notation. If 
 Unfortunately it's not quite the same. Luckily there's a Python module that will parse it for us. (Note that if you're consuming an API over the web, they'll usually be delivered as either JSON or XML. XML looks a lot like HTML, so you can just use Beautiful Soup to handle it).
 
 ```python
-import urllib2
+import urllib.request
 import json
 
 api_url = "https://fishbase.ropensci.org/species/?genus=Platichthys&species=stellatus"
 
-raw_json = urllib2.urlopen(api_url)
-parsed_json = json.load(raw_json) ## we use the json.load method directly
+raw_json = urllib.request.urlopen(api_url)
+decoded_json = raw_json.read().decode('utf-8')
+parsed_json = json.loads(decoded_json)
 raw_json.close()
 ```
 
