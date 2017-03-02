@@ -1,5 +1,11 @@
-Revisiting the Cocoli Dataset
------------------------------
+---
+layout: post
+title: Week 8- intro to data exploration and analysis in R
+date:   2017-03-01
+author: Gaurav Kandlikar
+---
+
+#Revisiting the Cocoli Dataset
 
 Last week we began to explore the forest dynamics data from Cocoli,
 Panama. Today, we will explore how we can use R and the package
