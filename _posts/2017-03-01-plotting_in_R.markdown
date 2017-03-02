@@ -5,7 +5,7 @@ date:   2017-03-01
 author: Gaurav Kandlikar
 ---
 
-#Revisiting the Cocoli Dataset
+# Revisiting the Cocoli Dataset
 
 Last week we began to explore the forest dynamics data from Cocoli,
 Panama. Today, we will explore how we can use R and the package
@@ -153,8 +153,9 @@ is a little ugly and will take a lot of work to improve:
 
     hist(cocoli_dat$dbh1, xlab = "DBH in 1994 (mm)", main = "Distributions of sizes in 1994")
 
-![]({{ site.url }}/images/ex8_files/figure-markdown_strict/unnamed-chunk-6-1.png) For example,
-we had said that logging the y-axis would be beneficial in this instance
+![]({{ site.url }}/images/ex8_files/figure-markdown_strict/unnamed-chunk-6-1.png) 
+
+For example, we had said that logging the y-axis would be beneficial in this instance
 because we can't get any meaningful information about the biggest tree
 sizes from the default histogram- however, logging the Y-axis of a
 histogram with base-R can get quite tedious:
@@ -302,7 +303,7 @@ Note that if you read the pipe operator `%>%` as the English word
     Take the cocoli dat, then group by the species code, then summarize for each species the basal area using the formula above, then arrange the area in descending order.
 
 There's a lot more you can do with dplyr- I refer you to [this
-tutorial](https://genomicsclass.github.io/book/pages/dyplr_tutorial.html)
+tutorial](http://genomicsclass.github.io/book/pages/dplyr_tutorial.html)
 for a thorough guide.
 
 Homework
