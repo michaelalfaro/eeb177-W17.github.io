@@ -1,0 +1,190 @@
+---
+layout: post
+title: Week 9- Analysing paleontological data with PyRate
+date:   2017-03-01
+author: Gaurav Kandlikar
+---
+
+## Introduction to PyRate
+Today in lab we will learn how to use [PyRate](https://github.com/dsilvestro/PyRate), a program that helps account for uncertainty in estimates of fossil species' origination and extinction dates. More in-depth discussion about the science of PyRate can be found [here](http://onlinelibrary.wiley.com/doi/10.1111/2041-210X.12263/abstract).
+
+PyRate is written as a series of `python` and `R` code that take information that can be downloaded from the paleobiology database as inputs and returns biologically relevant estimates. The `python` code in PyRate requires Python 2.X (not Python 3, which we have been using), so our first step today will be to install and use Python 2 on our virtualbox.
+
+## Setup
+We have been using the Python package manager [Conda](), which makes switching between python environments quite straightforward. Run the following commands in terminal to install and switch to python 2.7:
+
+
+```
+# these can be done from any directory
+# update conda...
+conda update conda
+
+# create a new environment named "py27" which uses Python version 2.7
+conda create --name py27 python=2.7
+
+# switch to your newly created environment
+source activate py27
+
+# verify that you have switched to py27
+conda info --envs  # there should be a * on the py27 lines, and not on the "root" line
+python --version # should output Python 2.7.13
+
+# install numpy and scipy, which we had installed for py3 but are not available yet in py27 
+conda install numpy
+conda install scipy
+
+```
+
+Now every time you upen a new terminal, you will be on the **Root environment of Conda**, which uses Python 3. If you plan to be using PyRate in the terminal, you need to begin the session by switching into the python 2.7 environment using `conda source activate py27`!
+
+
+#### Downloading PyRate
+
+To download PyRate, we can simply `git clone` the whole program into our virutal boxes. We will place the program in our home directory:
+
+```
+# navigate to home directory
+cd ~
+
+# clone the pyrate repo from github
+git clone https://github.com/dsilvestro/PyRate.git
+
+# verify that everything is present:
+cd PyRate
+ls
+```
+
+The output from the last `ls` command in the `PyRate` directory should look like this:
+
+```
+example_files                      PyRateDES.py            pyrate_utilities.r
+experimental_code                  pyrate_DES_utilities.R  README.md
+PyRateContinuous.py                pyrate_lib              requirements.txt
+PyRateContinuousShift.py           PyRateMCDD.py           tutorials
+pyrate_DES_input_example_script.R  PyRate.py
+```
+
+## Let's use PyRate
+
+With all the setup behind us, we are finally ready to use PyRate! Within your `lab-work` directory, create a new `exercise-9` directory. The remainder of this lab should be completed from within the `exercise-9` directory.
+
+### Downloading data
+
+Pyrate requires data from the PBDB that is downloaded according to the following specifications:
+
+> Download fossil occurrences for a clade from the Paleobiology Database. E.g. search for the genus Canis and save it as a cvs file, e.g. using the file name Canis_pbdb_data.csv. Before downloading the file, check the box "Show accepted names only" in the "Select by taxonomy" section, and uncheck the box "Include fmetadata at the beginning of the output" in the "Choose output options" section.
+
+Rather than making you do this separately from the web, we can simply navigate to the pbdb, enter the parameters listed above, and use `wget` to fetch the data from the download link created by pbdb. The following command fetches the data and uses the `-O` option of `wget` to save it in a new file called `canidae_occ.csv`:
+
+```
+wget -O canid_occ.csv "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Canidae&show=acconly"
+```
+
+#### To Do
+Before moving on, it is prudent to get a sense for what is happening in our freshly downloaded dataset. Use any of the shell commands you have learned so far to explore the contents of `canis_occ.csv`. Create a new `jupyter notebook` file, and in a markdown block write the answers to the following questions:
+
+1. How many fossils are included in the dataset?  
+2. How many fossils have been identified to genus-level only? How many to species-level?  
+3. How many unique accepted names are part of this dataset?  
+
+
+### Formatting data for PyRate  
+Before we run the pyrate program, we need to rearrange the data into a format that PyRate accepts. Happily, the authors of PyRate have written an `R` script to do this rearranging for us. The `R` script is saved as `~/PyRate/pyrate_utilities.r`. Our task now is to write a second R script that in turn uses this R script on our datafile. To do this, open rstudio from the `exercise-9` directory and run the following commands:
+
+```
+source("~/PyRate/pyrate_utilities.r")
+
+# we need to give the utilities a list of extant species
+extant_dogs = c("Canis rufus","Canis lupus","Canis aureus","Canis latrans","Canis mesomelas","Canis anthus","Pseudalopex gymnocercus","Canis adustus","Canis familiaris")
+
+# use the extract.ages.pbdb() function in pyrate_utilities to reformat our dataset...
+extract.ages.pbdb(file= "canid_occ.csv",extant_species=extant_dogs)
+
+# you should see the following output:
+
+# "This function is currently being tested - caution with the results!"
+# replicate 1
+# PyRate input file was saved in:  ./canid_occ_PyRate.py 
+
+
+# TO DO:
+# save the file as "process_data.R" in exercise-9
+
+# quit rstudio
+```
+
+**NOTE**: PyRate allows for a lot more sophistication in this step to account for the uncertainty in dating estimates, but we are using a simpler approach in the class. For more information, please refer to the official [PyRate tutorial](https://github.com/dsilvestro/PyRate/blob/master/tutorials/pyrate_tutorial_1.md).
+
+We should now be ready to run PyRate. Let's verify that our R script worked as expected. The `exercise-9` directory should contain two new files, named `canid_occ_PyRate.py` and `canid_occ_TaxonList.txt`. Let's inspect the contents of the freshly created `canid_occ_PyRate.py`. Issue the following commands in the `exercise-9` directory in the terminal:
+
+```
+head canid_occ_PyRate.py
+```
+
+The output should look something like this:
+
+```
+#!/usr/bin/env python
+from numpy import * 
+
+
+data_1=[array([14.891492,14.265626,14.802215,12.955048,15.86654,13.165415,15.150284,14.42986,15.375599,14.463246,13.607118,5.39764,13.449093]),
+array([18.754376,17.952686,15.336749,14.297858,14.342014,15.825685,14.766692,15.349627,14.59774,13.668734,15.245747]),
+```
+
+### Let's run PyRate!
+
+We can finally start running PyRate. Before running the full program, which can take a very long time, it is good to verify that our input data file `canid_occ_PyRate.py` is formatted perfectly. We can ask PyRate to run through our data file and summarize the data using the following command:
+
+```
+python ~/PyRate/PyRate.py canid_occ_PyRate.py -data_info
+```
+
+The output should begin with these lines, followed by many rows of `Taxon 	FA	LA`:
+
+```
+The analysis includes 211 species (0 were excluded)
+Using Gamma priors on the birth-death rates (G_l[1.1,1.1], G_m[1.1,1.1]).
+
+
+DATA SUMMARY
+
+211 species included in the data set
+51 species have a single occurrence, 9 species are extant
+2946 fossil occurrences (1 replicates), ranging from 55.004 (+/- 0.0) to 0.001 (+/- 0.0) Ma
+...
+```
+
+
+We have verified that PyRate can read our data file and are ready to run the whole file. Woohoo! The following command will launch the PyRate analysis on our datafile for 500000 steps in the MCMC chain. **NOTE**: we would normally want many many more steps in the chain! We are restricting to 500000 here for sake of time only.
+
+```
+python PyRate/PyRate.py Canis_raw_PyRate.py -n 500000
+```
+
+If all goes well, you should see output that looks like the following being printed out to the terminal screen:
+
+```
+1000	post: -5112.29 lik: -5102.1 (-3914.58, -1187.51) prior: -10.19 tot.l: 1336.7 k: 2
+	t.frames: [ 57.571   0.   ] (sp.)
+	t.frames: [ 57.571   0.   ] (ex.)
+	sp.rates: [ 0.132]
+	ex.rates: [ 0.149]
+	q.rate: 2.186 	Gamma.prm: 1.0
+	ts: [ 16.809  20.146  23.517  17.228  14.44 ] ...
+	te: [  4.171  13.068   4.857  12.583  13.329] ...
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
