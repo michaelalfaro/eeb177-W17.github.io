@@ -35,7 +35,7 @@ conda install scipy
 
 ```
 
-Now every time you upen a new terminal, you will be on the **Root environment of Conda**, which uses Python 3. If you plan to be using PyRate in the terminal, you need to begin the session by switching into the python 2.7 environment using `conda source activate py27`!
+Now every time you upen a new terminal, you will be on the **Root environment of Conda**, which uses Python 3. If you plan to be using PyRate in the terminal, you need to begin the session by switching into the python 2.7 environment using `source activate py27`!
 
 
 #### Downloading PyRate
@@ -87,6 +87,7 @@ Before moving on, it is prudent to get a sense for what is happening in our fres
 2. How many fossils have been identified to genus-level only? How many to species-level?  
 3. How many unique accepted names are part of this dataset?  
 
+--------------
 
 ### Formatting data for PyRate  
 Before we run the pyrate program, we need to rearrange the data into a format that PyRate accepts. Happily, the authors of PyRate have written an `R` script to do this rearranging for us. The `R` script is saved as `~/PyRate/pyrate_utilities.r`. Our task now is to write a second R script that in turn uses this R script on our datafile. To do this, open rstudio from the `exercise-9` directory and run the following commands:
@@ -134,7 +135,21 @@ array([18.754376,17.952686,15.336749,14.297858,14.342014,15.825685,14.766692,15.
 
 ### Let's run PyRate!
 
-We can finally start running PyRate. Before running the full program, which can take a very long time, it is good to verify that our input data file `canid_occ_PyRate.py` is formatted perfectly. We can ask PyRate to run through our data file and summarize the data using the following command:
+We can finally start running PyRate. But before we do, it is good practice to read through the help-file associated with the program:
+
+```
+python ~/PyRate/PyRate.py --help
+```
+
+#### To Do
+In the jupyter notebook you created above, please answer the following questions: 
+
+1. How can we change the sampling frequency of our PyRate run?  
+2. What does the `-n` flag achieve?  
+
+--------
+
+Before running the full program, which can take a very long time, it is good to verify that our input data file `canid_occ_PyRate.py` is formatted perfectly. We can ask PyRate to run through our data file and summarize the data using the following command:
 
 ```
 python ~/PyRate/PyRate.py canid_occ_PyRate.py -data_info
@@ -176,9 +191,40 @@ If all goes well, you should see output that looks like the following being prin
 
 ```
 
+This run will take a long time! During this time, please read through the [official PyRate tutorials] to get a better sense of all that we have achieved.  
+
+------------
+
+### Summarizing the output of PyRate
+
+Once your PyRate run has completed, you should see several new files in the `exercise-9` directory. Within `exercise-9`, you shuold now see the file `canid_occ_PyRate.pyc` and the directory `pyrate_mcmc_logs`; within that directory, you should see `canid_occ_1_marginal_rates.log`, `canid_occ_1_mcmc.log`, and `canid_occ_1_sum.txt`. \
+
+#### To Do:
+
+In your jupyter notebook above, write a summary of what each of these three files in `pyrate_mcmc_logs` show. You can find explanations on the PyRate github page.  
+
+------------
 
 
+### Rates through time plots
 
+One of the reasons to run PyRate is to get good estimates of diversification (i.e. speciation and extinction) rates of a lineage through time. PyRate comes with some utilities that help us plot these rates easily from the output log files. We can use `PyRate.py` with the -plot flag to generate a PDF file of these RTT (Rates Through Time) plots. Run the following command from within the `pyrate_mcmc_logs` directory:
+
+```
+python ~/PyRate/PyRate.py -plot canid_occ_1_marginal_rates.log
+```
+
+Running this command creates the `R` script `canid_occ_1_marginal_rates_RTT.r`, which is a script to plot the RTT plots into the file `canid_occ_1_marginal_rates_RTT.pdf`. Let's open this pdf file and look at the diversification rates:
+
+```
+see canid_occ_1_marginal_rates_RTT.pdf
+```
+
+---------
+
+### Combining analysis steps into a shell script
+
+Our full analysis is currently split up acorss a lot of different parts. If anyone else wants to repeat all of our analysis in exactly the same way, 
 
 
 
