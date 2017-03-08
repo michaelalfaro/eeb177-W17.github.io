@@ -115,7 +115,7 @@ extract.ages.pbdb(file= "canid_occ.csv",extant_species=extant_dogs)
 
 **NOTE**: PyRate allows for a lot more sophistication in this step to account for the uncertainty in dating estimates, but we are using a simpler approach in the class. For more information, please refer to the official [PyRate tutorial](https://github.com/dsilvestro/PyRate/blob/master/tutorials/pyrate_tutorial_1.md).
 
-We should now be ready to run PyRate. Let's verify that our R script worked as expected. The `exercise-9` directory should contain three new files, named `canid_occ_PyRate.py`, canid_occ.txt`, and `canid_occ_TaxonList.txt`. Let's inspect the contents of the freshly created `canid_occ_PyRate.py`. Issue the following commands in the `exercise-9` directory in the terminal:
+We should now be ready to run PyRate. Let's verify that our R script worked as expected. The `exercise-9` directory should contain three new files, named `canid_occ_PyRate.py`, `canid_occ.txt`, and `canid_occ_TaxonList.txt`. Let's inspect the contents of the freshly created `canid_occ_PyRate.py`. Issue the following commands in the `exercise-9` directory in the terminal:
 
 ```
 head canid_occ_PyRate.py
