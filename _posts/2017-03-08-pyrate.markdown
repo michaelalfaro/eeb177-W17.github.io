@@ -173,7 +173,7 @@ DATA SUMMARY
 We have verified that PyRate can read our data file and are ready to run the whole file. Woohoo! The following command will launch the PyRate analysis on our datafile for 250000 steps in the MCMC chain. **NOTE**: we would normally want many many more steps in the chain! We are restricting to 250000 here for sake of time only.
 
 ```
-python ~/PyRate/PyRate.py Canis_raw_PyRate.py -n 250000
+python ~/PyRate/PyRate.py canid_occ_PyRate.py -n 250000
 ```
 
 If all goes well, you should see output that looks like the following being printed out to the terminal screen:
