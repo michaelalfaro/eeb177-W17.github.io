@@ -248,7 +248,7 @@ Rscript process_canid_data.R
 python ~/PyRate/PyRate.py canid_occ_PyRate.py -data_info > data_summary.txt
 
 # And then, run PyRate!
-python ~/PyRate/PyRate.py Canis_raw_PyRate.py -n 500000
+python ~/PyRate/PyRate.py canid_occ_PyRate.py -n 500000
 ```
 
 We can now save this shell script in `shell-script-demo`. Before we can run the script, we need to **add permissions using `chmod`** Now, if we copy in `process_canid_data.R` into the `shell-script-demo` directory, we should be able to recreate our full analysis with a single command:
