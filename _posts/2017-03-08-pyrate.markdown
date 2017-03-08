@@ -16,7 +16,6 @@ We have been using the Python package manager [Conda](), which makes switching b
 
 ```
 # these can be done from any directory
-# update conda...
 conda update conda
 
 # create a new environment named "py27" which uses Python version 2.7
@@ -109,14 +108,14 @@ extract.ages.pbdb(file= "canid_occ.csv",extant_species=extant_dogs)
 
 
 # TO DO:
-# save the file as "process_data.R" in exercise-9
+# save the file as "process_canid_data.R" in exercise-9
 
 # quit rstudio
 ```
 
 **NOTE**: PyRate allows for a lot more sophistication in this step to account for the uncertainty in dating estimates, but we are using a simpler approach in the class. For more information, please refer to the official [PyRate tutorial](https://github.com/dsilvestro/PyRate/blob/master/tutorials/pyrate_tutorial_1.md).
 
-We should now be ready to run PyRate. Let's verify that our R script worked as expected. The `exercise-9` directory should contain two new files, named `canid_occ_PyRate.py` and `canid_occ_TaxonList.txt`. Let's inspect the contents of the freshly created `canid_occ_PyRate.py`. Issue the following commands in the `exercise-9` directory in the terminal:
+We should now be ready to run PyRate. Let's verify that our R script worked as expected. The `exercise-9` directory should contain three new files, named `canid_occ_PyRate.py`, canid_occ.txt`, and `canid_occ_TaxonList.txt`. Let's inspect the contents of the freshly created `canid_occ_PyRate.py`. Issue the following commands in the `exercise-9` directory in the terminal:
 
 ```
 head canid_occ_PyRate.py
@@ -171,10 +170,10 @@ DATA SUMMARY
 ```
 
 
-We have verified that PyRate can read our data file and are ready to run the whole file. Woohoo! The following command will launch the PyRate analysis on our datafile for 500000 steps in the MCMC chain. **NOTE**: we would normally want many many more steps in the chain! We are restricting to 500000 here for sake of time only.
+We have verified that PyRate can read our data file and are ready to run the whole file. Woohoo! The following command will launch the PyRate analysis on our datafile for 250000 steps in the MCMC chain. **NOTE**: we would normally want many many more steps in the chain! We are restricting to 250000 here for sake of time only.
 
 ```
-python PyRate/PyRate.py Canis_raw_PyRate.py -n 500000
+python ~/PyRate/PyRate.py Canis_raw_PyRate.py -n 250000
 ```
 
 If all goes well, you should see output that looks like the following being printed out to the terminal screen:
@@ -224,9 +223,57 @@ see canid_occ_1_marginal_rates_RTT.pdf
 
 ### Combining analysis steps into a shell script
 
-Our full analysis is currently split up acorss a lot of different parts. If anyone else wants to repeat all of our analysis in exactly the same way, 
+Our full analysis is currently split up acorss a lot of different parts. If anyone else wants to repeat all of our analysis in exactly the same way, there'd be a lot of different steps we would need to share. A better alternative would be to write a shell script that recreates all of the steps in our analysis, from downloading the data to making RTT plots, in one go. Save the following shell script as `full-pyrate-run.sh` in a new directory called `shell-script-demo` under the `exercise-9` directory.  
 
+```
+#! /bin/bash
 
+# Script to run full pyrate pipeline on Canidae
+
+# navigate to the working directory
+cd ~/Desktop/eeb-177/lab-work/exercise-9
+
+# download the data
+wget -O canid_occ.csv "https://paleobiodb.org/data1.2/occs/list.csv?base_name=Canidae&show=acconly"
+
+# use the R script we had created to format the data into a pyrate-friendly file
+# NOTE!
+# if the output files from the R script already exist in the working directory, 
+# THIS STEP WILL NOT WORK!
+# The existent files are NOT overwritten!
+Rscript process_canid_data.R
+
+# Verify that the data formatting worked, and redirect the output into a file called 
+# data_summary.txt so that it may be inspected later.
+python ~/PyRate/PyRate.py canid_occ_PyRate.py -data_info > data_summary.txt
+
+# And then, run PyRate!
+python ~/PyRate/PyRate.py Canis_raw_PyRate.py -n 500000
+```
+
+We can now save this shell script in `shell-script-demo`. Before we can run the script, we need to **add permissions using `chmod`** Now, if we copy in `process_canid_data.R` into the `shell-script-demo` directory, we should be able to recreate our full analysis with a single command:
+
+```
+./full-pyrate-run.sh
+```
+
+## Homework
+
+1. Open the RTT plots that you created during this exercise. In your Jupyter notebook, answer the following questions:  
+a. Describe the changes in Speciation rates across the Canidae lineage.
+b. Describe the changes in Extinction rates across the Canidae lineage.
+c. Describe the changes in Diversification rates across the Canidae lineage.
+
+2. Create a new directory within `exercise-9` called `longer-pyrate-run`.
+3. Use the `wget` command to download the Canidae dataset into this new directory.
+4. Complete all the steps necessary to run PyRate on the freshly downloaded dataset.
+5. Run PyRate for 2500000 steps. NOTE: I expect this to take ~4 hours to run, so you may want to run it over night.
+6. Create RTT plots for this new run. Do you see anything different about these RTT plots compared to the ones you had made with only 250000 steps in the MCMC chain?
+7. Create a copy of the `full-pyrate-run.sh` in the `longer-pyrate-run` directory. Modify the shell script so that it takes in two input variables:
+a) The link from which to download the raw data; 
+b) The length of the PyRate run.
+
+8. Commit and push everything in `longer-pyrate-run`, as well as your jupyter notebook from class, to github.
 
 
 
