@@ -4,6 +4,7 @@ title: Lecture PDFs + HW
 permalink: /lectures/
 ---
 
+Range plotting exercise: [link]({{ site.url }}lecture_pdfs/range-plotting-2.pdf)    
 Lecture 17:  [link]({{ site.url }}lecture_pdfs/lecture-17-Mar-7-2017.pdf)    
 
 Lecture 16:  [link]({{ site.url }}lecture_pdfs/lecture-16-Mar-2-2017.pdf)    
