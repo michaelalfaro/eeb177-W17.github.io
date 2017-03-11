@@ -6,8 +6,9 @@ permalink: /lectures/
 
 
 Undergrad list: [link]({{ site.url }}lecture_pdfs/eeb174-undergrads.csv)    
-Undergrad presentation randomzier: [link]({{ site.url }}lecture_pdfs/33b-174-randomizer.ipynb)    
+Undergrad presentation randomzier: [link]({{ site.url }}lecture_pdfs/33b-174-randomizer-v2.ipynb)    
 
+ggplot plotting exercise: [link]({{ site.url }}lecture_pdfs/ggplot-range-plots3.html)    
 Range plotting exercise: [link]({{ site.url }}lecture_pdfs/range-plotting-2.pdf)    
 Lecture 17:  [link]({{ site.url }}lecture_pdfs/lecture-17-Mar-7-2017.pdf)    
 
