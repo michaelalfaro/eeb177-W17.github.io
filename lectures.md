@@ -4,6 +4,8 @@ title: Lecture PDFs + HW
 permalink: /lectures/
 ---
 
+bird data formatting exercise: [link]({{ site.url }}lecture_pdfs/working-with-birds.ipynb)    
+canid data formatting: [link]({{ site.url }}lecture_pdfs/canids.ipynb)    
 
 Undergrad list: [link]({{ site.url }}lecture_pdfs/eeb174-undergrads.csv)    
 Undergrad presentation randomzier: [link]({{ site.url }}lecture_pdfs/33b-174-randomizer-v2.ipynb)    
