@@ -92,7 +92,7 @@ p
 
 We can control the size of the plot by adding the `fig.height` and `fig.width` arguments to the definition of the R chunk:
 
-```{r, fig.width=5, fig.height=6}
+```{r, fig.width=5, fig.height=6, fig.align='right', fig.cap="here's some text"}
 # make a plot using ggplot2
 library(ggplot2)
 
@@ -154,9 +154,17 @@ p
 
 There's a lot of great places to get help on RMarkdown documents online:  
 
-- RStudio's guide to Rmarkdown: [link]()   
-- WriteLatex's guide to Latex : [link]()   
-- Yihui Xie's book on Knitr: [link]()  
+
+## Including python code with syntax highlighting
+
+Use the following syntax to include `python` code with proper syntax hihglighting:
+
+\begin{verbatim}
+```{python, eval = F}
+f = open("/path/to/file")
+lines = f.readlines() 
+```
+\end{verbatim}
 
 
 ## Finally, importing in the references
@@ -165,3 +173,4 @@ In the current setup, RStudio's Rmd to PDF conversion adds a bibiolography to th
 \clearpage
 
 ## References
+
