@@ -154,6 +154,9 @@ p
 
 There's a lot of great places to get help on RMarkdown documents online:  
 
+RStudio guide to RMarkdown: [link](http://rmarkdown.rstudio.com/lesson-1.html)\footnote{http://rmarkdown.rstudio.com/lesson-1.html}     
+Sharelatex guide to latex:  [link](https://www.sharelatex.com/learn/Main_Page)\footnote{https://www.sharelatex.com/learn/Main_Page}
+
 
 ## Including python code with syntax highlighting
 
