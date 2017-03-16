@@ -43,4 +43,7 @@ wget -O ecology-letters.csl https://raw.githubusercontent.com/eeb177-W17/eeb177-
 
 Open `demo-document.Rmd` using RStudio from the `exercise-10` directory. You should now be able to knit the document by clicking the knit button as usual (*note*: you can also knit a file using `control+shift+K`). A document named `demo-document.pdf` should be created within the `exercise-10` directory. 
 
-Congrats! You have now made a beautifully typeset PDF report that includes R code, images, citations, and figures- all pretty much written in Markdown!
+Congrats! You have now made a beautifully typeset PDF report that includes R code, images, citations, and figures- all pretty much written in Markdown! The final markdown file should look something like this:
+
+<iframe src="https://drive.google.com/a/g.ucla.edu/file/d/0Bw9pe_6TQX7AQ19ld0tFR1BUcWs/preview" width="640" height="700"></iframe>
+
