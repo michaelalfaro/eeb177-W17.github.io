@@ -8,7 +8,7 @@ bird data formatting exercise: [link]({{ site.url }}lecture_pdfs/working-with-bi
 canid data formatting: [link]({{ site.url }}lecture_pdfs/canids.ipynb)    
 
 Undergrad list: [link]({{ site.url }}lecture_pdfs/eeb174-undergrads.csv)    
-Undergrad presentation randomzier: [link]({{ site.url }}lecture_pdfs/33b-174-randomizer-v2.ipynb)    
+Undergrad presentation randomzier: [link]({{ site.url }}lecture_pdfs/eeb-174-randomizer-v2.ipynb)    
 
 ggplot plotting exercise: [link]({{ site.url }}lecture_pdfs/ggplot-range-plots3.html)    
 Range plotting exercise: [link]({{ site.url }}lecture_pdfs/range-plotting-2.pdf)    
