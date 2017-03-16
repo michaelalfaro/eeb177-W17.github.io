@@ -71,7 +71,7 @@ Given that we have  those two entries in the `biblio.bib` file, we can cite them
 
 Just like any Rmd document, we can add R code chunks to this document:
 
-```{r}
+```{r, warning=FALSE}
 # make a plot using ggplot2
 library(ggplot2)
 
@@ -154,20 +154,24 @@ p
 
 There's a lot of great places to get help on RMarkdown documents online:  
 
-RStudio guide to RMarkdown: [link](http://rmarkdown.rstudio.com/lesson-1.html)\footnote{http://rmarkdown.rstudio.com/lesson-1.html}     
-Sharelatex guide to latex:  [link](https://www.sharelatex.com/learn/Main_Page)\footnote{https://www.sharelatex.com/learn/Main_Page}
+- RStudio's guide to RMarkdown: [link](http://rmarkdown.rstudio.com/lesson-1.html) \footnote{http://rmarkdown.rstudio.com/lesson-1.html}  
+- ShareLatex's guide to Latex: [link](https://www.sharelatex.com/learn) \footnote{(https://www.sharelatex.com/learn)}  
+- Yuhui Xie's guide to Knitr: [link](http://rmarkdown.rstudio.com/lesson-1.html) \footnote{http://rmarkdown.rstudio.com/lesson-1.html}
 
 
-## Including python code with syntax highlighting
+## Including python or bash code with syntax highlighting
 
 Use the following syntax to include `python` code with proper syntax hihglighting:
 
-\begin{verbatim}
 ```{python, eval = F}
 f = open("/path/to/file")
 lines = f.readlines() 
 ```
-\end{verbatim}
+
+```{bash, eval = F}
+for VAR in file.txt; do ...
+```
+
 
 
 ## Finally, importing in the references
