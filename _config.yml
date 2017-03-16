@@ -8,7 +8,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://eeb177-w17.github.io/" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  gauravsk
-exclude: weekly_content
+exclude: weekly_content, hw_files
 
 # Build settings
 markdown: kramdown
