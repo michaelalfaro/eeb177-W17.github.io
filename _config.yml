@@ -1,13 +1,12 @@
 # Site settings
-title: EEB 177/234 - Discussion 
-email: gkandlikar@ucla.edu
+title: EEB 191 - Biology and Social Justice 
+email: michaelalfaro@ucla.edu
 description: > # this means to ignore newlines until "baseurl:"
-  This is the course website for the Discussion section of UCLA W17 EEB-177/234 
-  (Practical Computing for Ecology and Evolutionary Biology).
+  This site has the updated syllabus and schedule for UCLA W18 EEB-191, Biology and Social Justice. Please note that assignments must be turned in through the CCLE.
 baseurl: "" # the subpath of your site, e.g. /blog/
-url: "https://eeb177-w17.github.io/" # the base hostname & protocol for your site
+url: "https://eeb191-w18.github.io/" # the base hostname & protocol for your site
 twitter_username: 
-github_username:  gauravsk
+github_username:  michaelalfaro
 exclude: weekly_content, hw_files
 
 # Build settings
