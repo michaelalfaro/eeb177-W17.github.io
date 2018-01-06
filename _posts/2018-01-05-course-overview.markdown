@@ -1,0 +1,30 @@
+## Introduction
+It is impossible to escape the societal implications of groundbreaking research within modern biology. However few course offerings serving majors housed within the Department of Ecology and Evolutionary Biology grapple with how biological research translates into policy and development of social norms. The goal of this course is to examine past and current examples of the intersection of biological research and society through the lens of diversity, inequality, and social justice. Through discussion, readings, and term papers we will examine how biological discover impacts and is impacted by social contexts.
+
+In this course we will explore five topics that illustrate an intersection between biological research and social policy. For each topic we will review the underlying biology, read literature illustrating the societal response to it, and engage the material through discussion, critical writings, and in class exercises. Assigned readings, in class exercises, and term papers will allow you to investigate ways in which biological research has be used to promote discrimination and entrench existing power inequities, as well as overturn prejudicial social norms and foster equality and inclusiveness.
+
+## Course Objectives
+This course satisfies the College of Letters and Science Undergraduate Diversity Requirement and is structured to foster critical thinking around diversity issues. Successful students will
+1. identify ways in which biological research has been used to promote, entrench, or overturn existing power inequities.
+2. articulate critical perspectives on historical and recent examples of intersections between biology and social policy through a term paper.
+3. learn to recognize how biological discovery can differentially impact stakeholders from different social, ethnic, racial, and gender classes.
+
+## Mid-Term Paper
+You are required to write a research paper that focuses on how a biological discovery has affected/changed/or impacted society. The paper should provide a concise background to the science underlying the discovery. In addition, the paper must analyze how this discovery has differentially impacted two or more stakeholders with respect to social justice, fairness, and/or inclusiveness. The paper should be 5-8 pages (not counting the bibliography) double spaced and include 5-8 citations to the primary literature underlying the science and at least 3 citations focused on sociological implications and analysis. The paper will be due Monday February 12th at 5:00 PM and must be uploaded to the CCLE through Turn-it-in. 5% of the paper grade will be based upon a one page proposal that should outline the discover, the stakeholders, and the essence of the conflict created by the discover and include two references-one to the science and the second to the social justice issues. The one page summary is due Monday the 22nd of January by 5PM through the CCLE.
+
+## Final Project
+The final project for this course is a short video that seeks to educate non-specialists about a recent scientific discovery that is having a substantial scientific and societal impact. **This topic should be distinct from your Mid-Term paper topic.** The video should provide an engaging and accessible summary of the discovery and an analysis and explanation of the differential impact of the discovery across affected populations. The video must also identify the chief barriers to social justice and advocate for remedies to increase fairness or mitigate harmful impacts and/or promote dialog across groups. You have the option to work individually or in pairs on the final project. We encourage you to be creative in making your videos--animation, live action, claymation, etc are all acceptable. 
+
+We will have a video viewing session the last week where you will present your project and respond to Q\&A from the audience. Videos should be short (3-5 minutes for single projects and 5-8 for pairs). Longer is not necessarily better! A well-edited three or five minute video can earn a top grade!
+
+5% of your final project grade will be based on a one page proposal due in weeks 3-5 (must be turned in by 5:00 PM February 9th to CCLE). We will provide feedback and approval within 3 days so that you can start working on the projects as soon as possible. 
+
+## Weekly reading response/reflection (10%)
+Each class is accompanied by a one-page reading response due the day before class (Tuesday of each week) by 8pm. These assignments require that students complete the assigned reading for the week, and then apply concepts from both class and the readings to discuss and reflect on the reading material. The responses must not just be regurgitation of what is in the reading, but must take what is in the material and incorporate one’s own reflection and original thoughts, including, but not limited to: expanding on the authors ideas, relating readings to current events and/or other relevant texts/articles, personal or professional response to readings, etc. 
+
+Writing should be organized, with clear arguments and supporting evidence from the readings. Students must incorporate at least half of the assigned readings for the week into their reflection. The reading reflections will be graded on a scale of 1-4 using the following rubric as a guideline: 
+
+1.  Shows some thinking and reasoning but most ideas are underdeveloped and unoriginal. Main points lack detailed development. Ideas are vague with little evidence of critical thinking.
+2.  Content indicates thinking and reasoning applied with original thought on a few ideas. Main points are present with limited detail and development. Some critical thinking is present.
+3.  Content indicates original thinking and develops ideas with sufficient and firm evidence. Main points well developed with quality supporting details and quantity. Critical thinking is weaved into points.
+4.  Content indicates synthesis of ideas, in-depth analysis and evidences original thought and support for the topic. Main points well developed with high quality and quantity support. Reveals high degree of critical thinking.
