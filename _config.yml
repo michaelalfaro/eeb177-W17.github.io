@@ -3,8 +3,8 @@ title: EEB 191 - Biology and Social Justice
 email: michaelalfaro@ucla.edu
 description: > # this means to ignore newlines until "baseurl:"
   This site has the updated syllabus and schedule for UCLA W18 EEB-191, Biology and Social Justice. Please note that assignments must be turned in through the CCLE.
-baseurl: "eeb191-W18" # the subpath of your site, e.g. /blog/
-url: "https://michaelalfaro.github.io/eeb191-W18.github.io/" # the base hostname & protocol for your site
+baseurl: "/eeb191-W18.github.io/" # the subpath of your site, e.g. /blog/
+url: "https://michaelalfaro.github.io" # the base hostname & protocol for your site
 twitter_username: 
 github_username:  michaelalfaro
 exclude: weekly_content, hw_files
